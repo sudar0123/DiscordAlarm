@@ -22,7 +22,7 @@ scheduler = AsyncIOScheduler(timezone='Asia/Seoul')
 
 @bot.event
 async def on_ready():
-    print(f'{bot.user} 봇이 온라인입니다!')
+    print(f'Logged in as {bot.user} (ID: {bot.user.id})')
 
     # 매일 0시, 3시, 6시... 정각마다 알림 전송
     scheduler.add_job(send_alarm, 'cron', hour='0,3,6,9,12,15,18,21', minute=0)
